@@ -14,7 +14,12 @@
 		?>
 	</h1>
 	<h1><?php 
-	echo substr_compare($string, $string, 15); 
+	echo substr_compare($string, $string, 15); // exo 2 nombre de mort avec 15 caractere //
+
+ ?></h1>
+ <br>
+ <h1><?php 
+	echo substr_count($string, 'w'); // exo 3 nombre de mort avec la lettre w //
 
  ?></h1>
 	
