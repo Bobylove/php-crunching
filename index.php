@@ -10,12 +10,12 @@
 		$string = file_get_contents("dictionnaire.txt", FILE_USE_INCLUDE_PATH);
 		$dico = explode("\n", $string);
 
-		echo count($dico);  // exo 1  Nombre de mots dans le dico //
+		echo "Nombre de mot dans le dico : " . count($dico);  // exo 1  Nombre de mots dans le dico //
 		?>
 	</h1>
 	<h1>
 		<?php 
-	echo substr_compare($string, $string, 15); // exo 2 nombres de mots avec 15 caracteres //
+	echo "Nombre de mot avec 15 caracteres " . substr_compare($string, $string, 15); // exo 2 nombres de mots avec 15 caracteres //
 
 	?>
 
@@ -23,7 +23,7 @@
 <br>
 <h1>
 	<?php 
-	echo substr_count($string, 'w'); // exo 3 nombres de mots avec la lettre w //
+	echo "Nombre de mot avec la lettre w : " . substr_count($string, 'w'); // exo 3 nombres de mots avec la lettre w //
 
 	?>
 
@@ -31,13 +31,13 @@
 <br>
 <h1>
 	<?php 
-	echo stripos($string, "q"); // exo 4 nombres de mots avec la lettre q en dernière position //
+	echo "Nombre de mot avec la lettre q en dernière position :   " . stripos($string, "q"); // exo 4 nombres de mots avec la lettre q en dernière position //
 
 	?>
 
 </h1>
 <br>
-<h1>
+<h1> Top 10 des films : 
 	<?php 
 	$string1 = file_get_contents("films.json", FILE_USE_INCLUDE_PATH);
 	$brut = json_decode($string1, true);
@@ -48,14 +48,26 @@
 			
 			echo "<li>" . $value["im:name"]['label'] . "</li>";
 		}else{
-			return false;
+			
 		}
 	}
 
  // exo 5 top 10 des films 
 	?>
-
 </h1>
+<br>
+<h1>
+	<?php
+
+
+
+ 
+	?>
+</h1>
+
+
+
+
 
 </body>
 </html>
