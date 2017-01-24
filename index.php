@@ -36,6 +36,26 @@
 	?>
 
 </h1>
+<br>
+<h1>
+	<?php 
+	$string1 = file_get_contents("films.json", FILE_USE_INCLUDE_PATH);
+	$brut = json_decode($string1, true);
+	$top = $brut["feed"]["entry"];
+	
+	foreach ($top as $key => $value) {
+		if ($key < 10) {
+			
+			echo "<li>" . $value["im:name"]['label'] . "</li>";
+		}else{
+			return false;
+		}
+	}
+
+ // exo 5 top 10 des films 
+	?>
+
+</h1>
 
 </body>
 </html>
