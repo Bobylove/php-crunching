@@ -10,10 +10,13 @@
 		$string = file_get_contents("dictionnaire.txt", FILE_USE_INCLUDE_PATH);
 		$dico = explode("\n", $string);
 
-		echo count($dico);
-
+		echo count($dico);  // exo 1  Nombre de mots dans le dico //
 		?>
 	</h1>
+	<h1><?php 
+	echo substr_compare($string, $string, 15); 
+
+ ?></h1>
 	
 </body>
 </html>
